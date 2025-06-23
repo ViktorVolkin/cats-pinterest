@@ -1,0 +1,31 @@
+.tab-nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    background-color: #2196F3;
+    height: 64px;
+
+    overflow: hidden;
+    font-size: 14px;
+    color: white;
+    .tab-container{
+        padding: 0 64px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        :hover{
+       background-color:  #1E88E5;
+    }
+    }
+
+}
+.tab-wrapper{
+    height: 100%;
+    width: 120px;
+    max-width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

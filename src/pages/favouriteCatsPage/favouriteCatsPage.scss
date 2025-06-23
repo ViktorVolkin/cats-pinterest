@@ -1,0 +1,51 @@
+.favourite-cats-page {
+  padding: 20px;
+}
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.cat-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cat-card:hover {
+  transform: scale(1.05);
+}
+
+.cat-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.heart-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  max-width: 28px;
+  max-height: 28px;
+  user-select: none;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.no-favorites {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #999;
+}
