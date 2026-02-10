@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+🐾 Cat-Pinterest
+A minimalist, high-performance image gallery dedicated entirely to cats. Built for speed, smoothness, and maximum cuteness.
+✨ Features
+Infinite Scroll: Seamless browsing experience with lazy loading.
+Cat Interactions: Like your favorite feline friends or unlike them if you change your mind.
+Favorites Page: A dedicated space to view all the cats you've hearted.
+Dockerized: One command to get the whole thing purring.
+Lightweight: Minimal dependencies, maximum performance.
+🚀 Quick Start
+The entire application is containerized for a "zero-config" setup.
+Prerequisites
+Docker
+Docker Compose
+Launching the App
+Clone the repository:
+bash
+git clone <repo-url>
+cd cat-pinterest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fire it up:
+bash
+docker-compose up -d
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Open your browser and go to: http://localhost:3000
+🛠 Tech Stack
+Frontend: React + Vite (for that lightning-fast HMR)
+Styling: CSS Modules / Tailwind (clean and responsive)
+Deployment: Docker & Docker Compose
+API: TheCatAPI (or your custom backend)
+📂 Project Structure
+/src/components — UI kit (Card, Grid, Navbar)
+/src/hooks — Custom hooks for infinite scroll and local storage
+/src/pages — Feed (Home) and Favorites page
+docker-compose.yml — Container orchestration
+🐈 How it Works
+Lazy Loading: Images only load when they enter the viewport, saving bandwidth.
+Infinite Scroll: A dedicated IntersectionObserver triggers a new API fetch when you reach the bottom of the page.
+Persistence: Your "Liked" cats are saved (via LocalStorage or Backend), so they won't disappear after a refresh.
